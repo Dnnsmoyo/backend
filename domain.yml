@@ -1,0 +1,102 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - start_python
+  - install_python
+  - test_python
+  - intro_django
+  - install_virtual_env
+  - install_django
+ 
+
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_start_python
+- utter_install_python
+- utter_test_python
+- utter_affirm
+- utter_deny
+- utter_intro_django
+- utter_install_virtual_env
+- utter_install_django
+
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_start_python:
+  - text: "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
+    buttons:
+    - title: "install python"
+      payload: "install_python"
+
+  utter_install_python:
+  - text: "On your pc click on the command prompt and type $ python3 --version. THis will show you your cureent python version. Run $ sudo apt-get update and $ sudo apt-get install python3.6.Congratulations, you now have python installed!"
+    buttons:
+    - title: "test python"
+      payload: "test_python"
+
+  utter_test_python:
+  - text: "In cmd type python to open python console. Then type an operation such as 1 + 1 to test if python is working"
+    buttons:
+    - title: "into to django"
+      payload: "intro_django"
+
+  utter_intro_django:
+  - text: "Django is a python web framework that is used to create rich,scalable web applications using python.Fore more on django visit: https://docs.djangoproject.com/:"
+    image: "https://developerhowto.com/wp-content/uploads/2018/12/phyton-django.jpg"
+    buttons:
+    - title: "intro to django"
+      payload: "intro_django"
+
+    
+  utter_install_virtual_env:
+  - text: "Before you install django you will need to install a virtual environment. A virtul environment is a container unique to every project and its main function is to retain depencies and packages for your project."
+  - text: "Simply navigate to your command line interface and type 'pip install virtualenv'. TYpe virtualenv --version to test installation."
+  - text: "In your desired directory create a new virtualenv by typing  'virtualenv (name of env)'. Then 'source venv/bin/activate'. "
+    buttons:
+    - title: "install django"
+      payload: "django"
+
+  utter_install_django:
+  - text: "Now that your virtualenv is activated install django by typing pip install django. This will install django for you."
+    buttons:
+    - title: "install django"
+      payload: "django"
+
+
+  utter_did_that_help:
+  - text: "Did that help you?."
+    buttons:
+    - title: "yes"
+      payload: "yes"
+    - title: "no"
+      payload: "no"
+
+  utter_affirm:
+  - text: "Great!"
+    image: "https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Face_Emoji_large.png?v=1480481056"
+
+  utter_deny:
+  - text: "Sorry to hear that!"
+
